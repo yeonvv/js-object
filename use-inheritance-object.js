@@ -27,6 +27,6 @@ lee.avg = function () {
 console.group("object useInheritance");
 
 console.log("kim.sum() :", kim.sum());
-console.log("lee.sum() :", lee.avg());
+console.log("lee.sum() :", lee.sum());
 
 console.groupEnd("object useInheritance");
