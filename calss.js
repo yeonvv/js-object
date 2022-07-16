@@ -8,20 +8,22 @@ class person {
     this.first = first;
     this.second = second;
   }
+  // construtor가 class함수를 이용하여 만든 객체는 constructor함수만 자동으로 살행하기에 class내에 넣어줘도 constructor함수안에만 안 넣으면 person.prototype.sum과 같은 의미를 가진다
+  // 여기서 알 수 있는 class를 사용하는 이유; 굳이 prototype method를 사용하지 않아도, 초기값을 가지는 constructor함수가 있어 class안에 넣어 코드를 쉽게 읽을 수 있다
+  sum = function () {
+    return `prototype: ${this.first + this.second}`;
+  };
 }
 
 let kim = new person("kim", 10, 20);
-console.log("kim", kim);
+kim.sum = function () {
+  return `this: ${this.first + this.second}`;
+};
+let song = new person("song", 10, 10, 10);
 
-// let park = new person("park", 10, 20, 30);
-// park.sum = function () {
-//   return `this: ${this.first + this.second + this.third}`;
-// };
-// let song = new person("song", 10, 10, 10);
+console.group("object class");
 
-// console.group("object prototype");
+console.log("kim.sum()", kim.sum());
+console.log("song.sum()", song.sum());
 
-// console.log("park.sum()", park.sum());
-// console.log("song.sum()", song.sum());
-
-// console.groupEnd("object prototype");
+console.groupEnd("object class");
