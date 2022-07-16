@@ -19,7 +19,7 @@
 // };
 
 // 위의 코드처럼 일일이 객체를 만들 필요 없이
-// constructor 객체를 만들고 new를 붙여 사용하면 그객체를 모티브로 한 새로운 객체가 만들어진다
+// constructor(생성자) 객체를 만들고 new를 붙여 사용하면 그객체를 모티브로 한 새로운 객체가 만들어진다
 // constructor가 되는 객체를 만들고 수정하면 해당 객체를 이용하여 만들어진 모든 객체가 한번에 바뀐다
 function person(name, fir, sec, thi) {
   this.name = name;
